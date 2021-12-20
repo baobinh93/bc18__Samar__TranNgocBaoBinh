@@ -794,8 +794,6 @@
 
                         </div>
                     </div>
-                   
-                    
                 </div>
                 <div class="testimonial__comments">
                     <div class="testimonial__comment">
@@ -1206,12 +1204,17 @@
     type="text/javascript"
     src="./libraries/slick-1.8.1/slick/slick.min.js"
   ></script>
+    
+    <!-- ---- start Count Up ----  -->
     <script>
             $(".counter").countUp({
                 'time': 6000,
                 'delay': 30,
             });
     </script>
+    <!-- ---- end Count Up ----  -->
+
+    <!-- ---- start active when hover ----  -->    
     <script>
         let boxes = $('.feature__box');
         let lengthOfBoxes = boxes.length;
@@ -1234,6 +1237,9 @@
             }
         }
     </script>
+    <!-- ---- end active when hover ----  -->  
+
+    <!-- ---- start Slick ----  -->  
     <script>
         $(document).ready(function () {
         $(".testimonial__guests").slick({
@@ -1289,6 +1295,9 @@
     
       });
     </script>
+    <!-- ---- end Slick ----  -->  
+
+    <!-- ---- start Scroll to Top Btn  ----  -->  
     <script>
         const mybutton = document.getElementById('scrollTopBtn');
         window.onscroll = function() {scrollFunction()};
@@ -1300,5 +1309,6 @@
             }
         }
     </script>
+     <!-- ---- end Scroll to Top Btn  ----  -->  
 </body>
 </html>
