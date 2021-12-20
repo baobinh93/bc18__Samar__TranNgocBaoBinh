@@ -52,6 +52,7 @@ body {
   background: var(--bg-gradient-to-right);
   background-size: 200%;
   cursor: pointer;
+  transition: background-position-x 0.15s linear;
 }
 .btn__gradient:hover {
   background-position-x: 100%;
