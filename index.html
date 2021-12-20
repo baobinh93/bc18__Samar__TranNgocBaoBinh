@@ -260,7 +260,7 @@
             </div>
         </div>
     </header>
-    <section class="banner">
+    <section class="banner" id="top">
        
         <div class="container">
             <div class="banner__content">
@@ -990,7 +990,7 @@
                     </div>
                 </div>
          </div>
-     </section>
+     </section> 
      <footer class="footer">
          <div class="container">
              <div class="footer__form">
@@ -1188,7 +1188,11 @@
                 </div>
             </div>
      </footer>
-
+     <button class="scroll-to-top" id="scrollTopBtn">
+            <a class="scroll-to-top__link" href="#top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+     </button>
      <script
      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -1286,7 +1290,15 @@
       });
     </script>
     <script>
-      
+        const mybutton = document.getElementById('scrollTopBtn');
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
