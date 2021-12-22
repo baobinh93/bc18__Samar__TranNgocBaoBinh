@@ -913,12 +913,13 @@ input[name="yourChoice"] {
   background-color: transparent;
   margin: 30px auto 0 auto;
   position: relative;
+  overflow: hidden;
 }
 .testimonial__guests::before {
   content: "";
   display: block;
   position: absolute;
-  z-index: 1;
+  z-index: 10;
   width: 40px;
   top: 0;
   bottom: 0;
@@ -929,6 +930,7 @@ input[name="yourChoice"] {
   content: "";
   display: block;
   position: absolute;
+  z-index: 10;
   width: 40px;
   top: 0;
   bottom: 0;
@@ -936,11 +938,10 @@ input[name="yourChoice"] {
   background: linear-gradient(to left, white 0%, rgba(255, 255, 255, 0) 100%);
 }
 .testimonial__guest {
-  text-align: center;
   width: 100px;
   height: 200px;
-  position: relative;
 }
+
 .testimonial__guest::before,
 .testimonial__guest::after {
   content: "";
@@ -1010,28 +1011,31 @@ input[name="yourChoice"] {
   transition: bottom 0.4s linear;
 }
 
-.slick-active .guest__img::after {
+.swiper-slide-active .guest__img::after {
   bottom: -30px;
 }
 
-.slick-active .guest__img {
+.swiper-slide-active .guest__img {
   top: 5px;
 }
-.slick-active.testimonial__guest::before {
+.swiper-slide-active .testimonial__guest::before {
   top: 148px;
   opacity: 1;
 }
 
-.slick-active.testimonial__guest::after {
+.swiper-slide-active .testimonial__guest::after {
   top: 125px;
   opacity: 1;
 }
+
 .testimonial__comments {
   margin-top: 20px;
   margin-bottom: 0;
 
   margin-left: auto;
   margin-right: auto;
+  overflow: hidden;
+  position: relative;
 }
 .testimonial__comment {
   padding: 45px;
@@ -1041,6 +1045,13 @@ input[name="yourChoice"] {
   border-radius: 10px;
   background-color: var(--bg-white);
   margin: 20px 100px 60px 100px;
+  position: relative;
+}
+.testimonial__comment img {
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  width: 70px;
 }
 .comment__author {
   font-size: 2.2rem;
@@ -1058,21 +1069,6 @@ input[name="yourChoice"] {
 .comment__comment {
   font-size: 1.8rem;
   color: var(--text-black-thin);
-}
-.testimonial__comments ul.slick-dots {
-  bottom: 10px;
-  z-index: 1;
-}
-
-ul.slick-dots li button::before {
-  font-size: 1rem;
-}
-ul.slick-dots li.slick-active button::before {
-  color: var(--text-pink) !important;
-}
-ul.slick-dots li button:hover:before {
-  color: black;
-  opacity: 0.25;
 }
 
 /* --- end Testimonial --- */
