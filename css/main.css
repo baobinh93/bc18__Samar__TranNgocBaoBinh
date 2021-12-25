@@ -910,9 +910,9 @@ input[name="yourChoice"] {
 .testimonial__guests {
   width: 300px;
   height: 170px;
-  background-color: transparent;
+  /* background-color: transparent; */
   margin: 30px auto 0 auto;
-  position: relative;
+  /* position: relative; */
   overflow: hidden;
 }
 .testimonial__guests::before {
@@ -1034,7 +1034,7 @@ input[name="yourChoice"] {
 
   margin-left: auto;
   margin-right: auto;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
 }
 .testimonial__comment {
