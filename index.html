@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <header>
+    <header id="header">
         <div class="container">
             <div class="header__content">
 
@@ -1327,8 +1327,8 @@
     <!-- ---- start Scroll to Top Btn  ----  -->  
     <script>
         const mybutton = document.getElementById('scrollTopBtn');
-        window.onscroll = function() {scrollFunction()};
-        function scrollFunction() {
+        window.addEventListener('scroll' , openBtnToTop);
+        function openBtnToTop() {
             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
                 mybutton.style.display = "block";
             } else {
@@ -1337,5 +1337,24 @@
         }
     </script>
      <!-- ---- end Scroll to Top Btn  ----  -->  
+
+     <!-- --- start Transparent for header -----  -->
+     <script>
+
+         const header = document.getElementById('header');
+         window.addEventListener('scroll', transparentHeader);
+         function transparentHeader() {
+             if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                 header.style.backgroundColor = "#ffffff";
+                 header.style.boxShadow = "0 0 50px 0 rgb(0 0 0 / 10%)";
+             } else {
+                 header.style.backgroundColor = "transparent";
+                 header.style.boxShadow = "0 0 50px 0 rgb(0 0 0 / 0%)";
+             }
+         }
+
+     </script>    
+
+     <!-- --- end Transparent for header -----  -->
 </body>
 </html>
